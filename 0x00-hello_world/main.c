@@ -7,9 +7,7 @@
 
 int main(void)
 {
-<<<<<<< HEAD
-=======
 	printf("Hello, World!\n")
->>>>>>> eb827e35da61da31282d90da6a727bb59ddad20f
-	return (0);
+
+		return (0);
 }
