@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
- * Main - prints a string
+ * main - prints a string
  *
- * return: (int)
+ * Return: 0
  */
 int main(void)
 {
 	printf("with proper grammar, but the outcome is a piece of art,\n");
-return (int);
+return (0);
 }
