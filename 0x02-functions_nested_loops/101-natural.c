@@ -13,8 +13,10 @@ int main(void)
 	while (i < 10)
 	{
 		if ((i % 3 == 0) || (i % 5 == 0))
+		{
 			i += i;
 			i++;
+		}
 	}
 	printf("%d\n", i);
 		return (0);
