@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <limits.h>
 /**
   * print_last_digit -  prints last didgit of numbers
   * @n: input parameter
@@ -9,16 +9,7 @@
 
 int print_last_digit(int n)
 {
-	int num;
-
-	if (n < 0)
-	{
-		num = _putchar(-n % 10 + '0');
-		return (num);
-	}
-	else
-	{
-		num = _putchar(n % 10 + '0');
-		return (num);
-	}
+	int num = n % 10;
+	_putchar(num + '0');
+	return (num);
 }
