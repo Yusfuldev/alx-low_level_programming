@@ -10,12 +10,12 @@ int main(void)
 {
 	int i;
 
-	while (i < 1024)
+	while (i < 10)
 	{
-		if (i % 3 == 0 || i % 5 == 0)
-			i+=i;
-		i++;
+		if ((i % 3 == 0) || (i % 5 == 0))
+			i += i;
+			i++;
 	}
-	printf("%d\n" , i);
+	printf("%d\n", i);
 		return (0);
 }
