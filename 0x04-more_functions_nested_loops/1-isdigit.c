@@ -8,15 +8,9 @@
 
 int _isdigit(int c)
 {
-	int isdig;
-	int n;
+	if (c >= '0' && c <= '9')
+		return (1);
 
-	for (n = 0; n <= 9; n++)
-	{
-		if (c == n && c != '\0')
-			isdig = 1;
-		else
-			isdig = 0;
-	}
-	return (isdig);
+	else
+		return (0);
 }
