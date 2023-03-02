@@ -17,7 +17,7 @@ void reverse_array(int *a, int n)
 	n = k;
 	for (i = 0, j = n - 1; i < j; i++, j--)
 	{
-		if (i == j)
+		if (i >= j)
 			break;
 
 		c = a[i];
