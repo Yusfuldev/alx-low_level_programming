@@ -31,9 +31,9 @@ char *cap_string(char *s)
 int _seperators(char c)
 {
 	int i = 0;
-	char seperators[10] = { ',', ';', '.', '!', '?',
+	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
 		'"', '(', ')', '{', '}' };
-	for (; i < 10; i++)
+	for (; i < 13; i++)
 	{
 		if (c == seperators[i])
 			return (1);
