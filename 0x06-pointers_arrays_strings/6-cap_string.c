@@ -1,3 +1,4 @@
+#include "main.h"
 int _seperators(char c);
 
 /**
