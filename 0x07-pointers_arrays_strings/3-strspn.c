@@ -8,6 +8,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
+
 int count = 0, flag;
 	char *start = accept;
 
