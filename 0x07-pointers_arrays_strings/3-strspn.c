@@ -30,4 +30,4 @@ int count = 0, flag;
 			break;
 	}
 	return (count);
-}	
+}
