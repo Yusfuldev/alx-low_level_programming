@@ -26,4 +26,4 @@ char *n = needle, *h = haystack;
 		haystack = h + 1;
 	}
 	return (NULL);
-}	
+}
