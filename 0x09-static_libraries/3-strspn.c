@@ -1,14 +1,15 @@
 #include "main.h"
-
 /**
- * _strspn - a function that gets the length of a prefix substring.
- * @s: an input string
- * @accept: an input character with to locate into string s
- * Return: returns pointer to c position
+ * _strspn - gets the length of a substring string
+ * @s: string to search
+ * @accept: string to search for
+ * Return: retirns number bytes in the initial segment
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	int count = 0, flag;
+
+int count = 0, flag;
 	char *start = accept;
 
 	while (*s)
