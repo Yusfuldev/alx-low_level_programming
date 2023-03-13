@@ -4,7 +4,7 @@
 /**
  * _strdup - copies a string into a new allocated memory
  * @str:  string to be copied
- * Returns: a pointer to the new allocated memory
+ * Return: a pointer to the new allocated memory
  */
 
 char *_strdup(char *str)
@@ -19,7 +19,7 @@ char *_strdup(char *str)
 	while (i < len)
 	{
 		if (str == NULL)
-			return NULL;
+			return (NULL);
 		d[i] = str[i];
 		i++;
 	}
