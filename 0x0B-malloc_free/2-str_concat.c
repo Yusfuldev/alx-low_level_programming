@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 #include <stdlib.h>
 /**
  * str_concat - concats to strings
@@ -9,22 +8,35 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *new_str;
-	int i = 0, size, size1, size2;
 
-	size1 = strlen(s1);
-	size2 =  strlen(s2);
-	size = size1 + size2;
-	new_str = malloc(sizeof(char) * size + 1);
+	char *new_str, *starts1, *starts2;
+	int i = 0, lens1 = 0, lens2 = 0;
+
+	starts1 = s1;
+	starts2 = s2;
+	if (s1 == NULL)
+		s1 = "";
+	while (*s1)
+	{
+		lens1++;
+		s1++;
+	}
+	s1 = starts1;
+	if (s2 == NULL)
+		s2 = "";
+	while (*s2)
+	{
+		lens2++;
+		s2++;
+	}
+	s2 = starts2;
+	new_str = malloc(sizeof(char) * (lens1 + lens2 + 1));
+	starts1 = new_str;
 	if (new_str == NULL)
 		return (NULL);
-	while (i < size)
+	for (; i < (lens1 + lens2); i++)
 	{
-		if (s1 == NULL)
-			new_str[i] = *s2;
-		if (s2 == NULL)
-			new_str[i] = *s1;
-		if (i < size1)
+		if (i < lens1)
 		{
 			new_str[i] = *s1;
 			s1++;
@@ -34,8 +46,7 @@ char *str_concat(char *s1, char *s2)
 			new_str[i] = *s2;
 			s2++;
 		}
-		i++;
 	}
 	new_str[i] = '\0';
-	return (new_str);
+	return (starts1);
 }
