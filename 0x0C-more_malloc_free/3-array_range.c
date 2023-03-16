@@ -6,7 +6,7 @@
  * @max: max value
  * Return: return a pointer to the created array
  */
- int *array_range(int min, int max)
+int *array_range(int min, int max)
 {
 	int *array;
 	int diff, i;
