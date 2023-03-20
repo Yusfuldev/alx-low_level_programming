@@ -1,4 +1,4 @@
-#include "main.h"
+#include "dog.h"
 /**
  * int_dog- initializes struct dog
  * @d: pointer to struct to initialise
