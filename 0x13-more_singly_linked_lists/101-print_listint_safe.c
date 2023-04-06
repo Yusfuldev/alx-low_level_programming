@@ -1,4 +1,5 @@
 #include "lists.h"
+#include "stdlib.h"
 
 /**
  * print_listint_safe - prints list
@@ -12,7 +13,6 @@ size_t print_listint_safe(const listint_t *head)
 	while (head)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
-		
 
 		if (head > head->next)
 		{
@@ -24,7 +24,7 @@ size_t print_listint_safe(const listint_t *head)
 			printf("-> [%p] %d\n", (void *)head, head->n);
 			exit(98);
 		}
-count++;
+		count++;
 	}
 	return (count);
 }
