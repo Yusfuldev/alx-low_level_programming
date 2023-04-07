@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * binary_to_unit- converts binary to unsigned int
+ * binary_to_uint- converts binary to unsigned int
  * @b: binary to be converted
  * Return: Converted number otherwise 0.
  */
@@ -11,11 +11,11 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
-	
+
 	while (*b != '\0')
 		b++;
-	b-=1;
-	while (b !=NULL && *b)
+	b -= 1;
+	while (b != NULL && *b)
 	{
 		if (*b != '0' && *b != '1')
 			return (0);
