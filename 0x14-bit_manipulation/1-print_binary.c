@@ -2,7 +2,7 @@
 
 void print_binary(unsigned long int n)
 {
-	size_t s = sizeof(unsigned long int)*8;
+	size_t s = sizeof(unsigned long int) * 8;
 	int i = s - 1, f = 0;
 
 	if (n == 0)
