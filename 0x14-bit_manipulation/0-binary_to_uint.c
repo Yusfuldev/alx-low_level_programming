@@ -7,21 +7,26 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal = 0;
+	unsigned int result = 0, i = 0;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 
-	while (*b != '\0')
-		b++;
-	b -= 1;
-	while (b != NULL && *b)
+	if (b[i] != '\0')
 	{
-		if (*b != '0' && *b != '1')
-			return (0);
-		decimal <<= 1;
-		decimal += *b - '0';
-		b--;
+		while (b[i] != '\0')
+			i++;
+
+		while (b[i] != '\0')
+		{
+			if (b[i] != '0' && b[i] != '1')
+				return (0);
+
+			result += (b[i] - '0') << i;
+			i--;
+		}
+
+		return (result);
 	}
-	return (decimal);
+	return (0);
 }
