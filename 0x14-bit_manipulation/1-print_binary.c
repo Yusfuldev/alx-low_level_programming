@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_binary- prints binary of a number
+ * @n: Number to convert
+ * Return: Nothing
+ */
 void print_binary(unsigned long int n)
 {
 	size_t s = sizeof(unsigned long int) * 8;
