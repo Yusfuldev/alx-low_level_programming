@@ -9,10 +9,8 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int diff = n ^ m, count = 0;
-	size_t s = sizeof(unsigned long int) * 8;
-	int i = 0;
 
-	for (i = s - 1; i >= 0; i--)
+	while (diff)
 	{
 		if (diff & 1)
 			count++;
