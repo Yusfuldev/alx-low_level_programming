@@ -15,7 +15,7 @@ int _close(int fd);
 int main(int argc, char *argv[])
 {
 	int src, dest;
-	ssize_t read_val = 1, w_val;
+	ssize_t read_val, w_val;
 	char buff[1024];
 
 	if (argc < 3)
@@ -38,27 +38,24 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
+	read_val = read(src, buff, sizeof(buff));
 	while (read_val > 0)
 	{
-		read_val = read(src, buff, sizeof(buff));
-		if (argv[1] == NULL || read_val < 0)
-		{
-			_close(src);
-			_close(dest);
-			dprintf(STDERR_FILENO, "Error: Can't read from file \"%s\"\n", argv[1]);
-			exit(98);
-		}
 		w_val  = write(dest, buff, read_val);
 		if (w_val < 0)
 		{
-			_close(src);
 			_close(dest);
 			dprintf(STDERR_FILENO, "Error: Can't write to \"%s\"\n", argv[2]);
-			exit(99);
 		}
+		read_val = read(src, buff, sizeof(buff));
 	}
-	_close(src);
-	_close(dest);
+		if (argv[1] == NULL || read_val < 0)
+		{
+			_close(src);
+			dprintf(STDERR_FILENO, "Error: Can't read from file \"%s\"\n", argv[1]);
+		}
+	close(src);
+	close(dest);
 	return (0);
 }
 /**
