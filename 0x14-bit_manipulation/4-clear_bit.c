@@ -7,10 +7,10 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-        size_t s = sizeof(unsigned long int) * 8;
+	size_t s = sizeof(unsigned long int) * 8;
 
-        if (index > s)
-                return (-1);
-        *n &= ~(1 << index);
-        return (1);
+	if (index > s)
+		return (-1);
+	*n &= ~(1 << index);
+	return (1);
 }
