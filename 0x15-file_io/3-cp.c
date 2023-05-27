@@ -1,6 +1,8 @@
-#include "holberton.h"
 #include <stdio.h>
+#include <fcntl.h>
+#include <unistd.h>
 #include <stdlib.h>
+
 
 char *create_buffer(char *file);
 void close_file(int fd);
